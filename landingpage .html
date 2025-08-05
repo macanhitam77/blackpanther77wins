@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACKPANTHER77 - Petualangan Tanpa Batas!</title>
+    <!-- Memuat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Memuat Font Inter dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <!-- Memuat Font Awesome untuk ikon (misalnya, ikon game) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Dark background for gaming theme */
+            color: #e2e8f0; /* Light text color */
+        }
+        .hero-section {
+            /* Background image and overlay for a dramatic effect */
+            background-image: url('https://i.postimg.cc/67pvWxGd/4514241b8d6ac0e4a13ee381b910b006.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            isolation: isolate; /* To make z-index work for pseudo-elements */
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+            z-index: -1;
+        }
+        .game-title-font {
+            font-family: 'Orbitron', sans-serif; /* Futuristic font for game titles */
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #8b5cf6 0%, #ec4899 100%); /* Purple to Pink gradient */
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.6);
+        }
+        .btn-secondary {
+            border: 2px solid #ec4899;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-secondary:hover {
+            background-color: #ec4899;
+            color: white;
+        }
+        .card-game {
+            background-color: #2d3748; /* Slightly lighter dark background for cards */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card-game:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .neon-text {
+            text-shadow: 0 0 5px #f87171, 0 0 10px #f87171, 0 0 15px #f87171;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Navigasi Bar -->
+    <nav class="bg-black-900 bg-opacity-80 backdrop-blur-sm shadow-lg p-4 fixed w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-extrabold game-title-font text-gold-400 neon-text">BLACKPANTHER77</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#" class="text-black-300 hover:text-gold-400 transition duration-300">Beranda</a>
+                <a href="#" class="text-black-300 hover:text-gold-400 transition duration-300">Game</a>
+                <a href="#" class="text-black-300 hover:text-gold-400 transition duration-300">Komunitas</a>
+                <a href="#" class="text-black-300 hover:text-gold-400 transition duration-300">Dukungan</a>
+                <button class="btn-primary text-white px-6 py-2 rounded-full font-semibold">Masuk</button>
+            </div>
+            <!-- Tombol Hamburger untuk Mobile -->
+            <button class="md:hidden text-black-300 focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Bagian Hero -->
+    <header class="hero-section text-white py-32 md:py-48 text-center flex items-center justify-center min-h-screen">
+        <div class="container mx-auto px-4 relative z-10">
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 game-title-font neon-text">
+                Kemenangan Tanpa Batas!
+            </h1>
+            <p class="text-lg md:text-2xl mb-10 max-w-3xl mx-auto text-gray-200">
+                Raih kemenangan mu, Taklukkan musuh, dan Claim Bonusmu.
+            </p>
+            <div class="space-x-4 flex justify-center flex-wrap gap-4">
+                <button class="btn-primary text-white px-10 py-4 rounded-full font-bold text-xl">
+                    <i class="fas fa-play-circle mr-2"></i> Mainkan Sekarang!
+                </button>
+                <button class="btn-secondary text-white px-10 py-4 rounded-full font-bold text-xl">
+                    <i class="fas fa-info-circle mr-2"></i> INFO TERUPDATE
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Bagian Game Populer -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12 game-title-font text-purple-400 neon-text">Game Populer</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Kartu Game 1 -->
+                <div class="card-game rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/400x250/312e81/ffffff?text=Game+Fantasi+RPG" alt="Game Fantasi RPG" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-white">Shadow Realm Saga</h3>
+                        <p class="text-gray-400 text-sm mb-4">RPG epik dengan dunia terbuka yang luas dan pertempuran mendebarkan.</p>
+                        <button class="btn-primary text-white px-6 py-2 rounded-full text-sm">Mainkan</button>
+                    </div>
+                </div>
+                <!-- Kartu Game 2 -->
+                <div class="card-game rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/400x250/1e3a8a/ffffff?text=Game+Sci-Fi+FPS" alt="Game Sci-Fi FPS" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-white">Cosmic Warfare</h3>
+                        <p class="text-gray-400 text-sm mb-4">FPS intens di luar angkasa dengan grafis memukau.</p>
+                        <button class="btn-primary text-white px-6 py-2 rounded-full text-sm">Mainkan</button>
+                    </div>
+                </div>
+                <!-- Kartu Game 3 -->
+                <div class="card-game rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/400x250/064e3b/ffffff?text=Game+Strategi+MOBA" alt="Game Strategi MOBA" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-white">Mythic Arena</h3>
+                        <p class="text-gray-400 text-sm mb-4">MOBA kompetitif dengan pahlawan unik dan strategi mendalam.</p>
+                        <button class="btn-primary text-white px-6 py-2 rounded-full text-sm">Mainkan</button>
+                    </div>
+                </div>
+                <!-- Kartu Game 4 -->
+                <div class="card-game rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/400x250/4a044e/ffffff?text=Game+Petualangan" alt="Game Petualangan" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-white">Ancient Ruins Quest</h3>
+                        <p class="text-gray-400 text-sm mb-4">Petualangan seru mencari harta karun di reruntuhan kuno.</p>
+                        <button class="btn-primary text-white px-6 py-2 rounded-full text-sm">Mainkan</button>
+                    </div>
+                </div>
+            </div>
+            <button class="mt-12 btn-secondary text-white px-8 py-3 rounded-full font-bold text-lg">
+                Lihat Semua Game <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Bagian Mengapa Bergabung -->
+    <section class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12 game-title-font text-purple-400 neon-text">Mengapa Bergabung dengan GameVerse?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-lg bg-gray-700 shadow-md">
+                    <i class="fas fa-users text-5xl text-purple-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Komunitas Aktif</h3>
+                    <p class="text-gray-300">Bergabunglah dengan jutaan gamer lainnya di komunitas kami yang ramah.</p>
+                </div>
+                <div class="p-6 rounded-lg bg-gray-700 shadow-md">
+                    <i class="fas fa-trophy text-5xl text-purple-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Turnamen & Hadiah</h3>
+                    <p class="text-gray-300">Ikuti turnamen seru dan menangkan hadiah eksklusif.</p>
+                </div>
+                <div class="p-6 rounded-lg bg-gray-700 shadow-md">
+                    <i class="fas fa-gamepad text-5xl text-purple-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Koleksi Game Luas</h3>
+                    <p class="text-gray-300">Temukan game baru setiap minggu dari berbagai genre.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Ajakan Bertindak Akhir -->
+    <section class="py-20 bg-gray-900 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 game-title-font text-purple-500 neon-text">
+                Siap untuk Petualangan Anda?
+            </h2>
+            <p class="text-lg md:text-xl mb-10 text-gray-300">
+                Daftar sekarang dan mulailah perjalanan gaming Anda yang tak terlupakan!
+            </p>
+            <button class="btn-primary text-white px-12 py-5 rounded-full font-bold text-2xl">
+                Daftar Gratis!
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-gray-400 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 GameVerse. Semua Hak Dilindungi.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-white transition duration-300">Kebijakan Privasi</a>
+                <a href="#" class="hover:text-white transition duration-300">Syarat Penggunaan</a>
+                <a href="#" class="hover:text-white transition duration-300">Kontak</a>
+            </div>
+            <div class="mt-4 text-lg space-x-4">
+                <a href="#" class="hover:text-white transition duration-300"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-white transition duration-300"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-white transition duration-300"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
